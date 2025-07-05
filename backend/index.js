@@ -16,6 +16,7 @@ const headlineTemplates = [
   (name, location) => `What Makes ${name} Stand Out in ${location}'s Market`,
 ];
 
+
 // POST /business-data
 app.post("/business-data", (req, res) => {
   const { name, location } = req.body;
@@ -32,6 +33,7 @@ app.post("/business-data", (req, res) => {
 
   res.json({ rating, reviews, headline });
 });
+
 
 // GET /regenerate-headline
 app.get("/regenerate-headline", (req, res) => {
@@ -51,3 +53,4 @@ app.get("/regenerate-headline", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
